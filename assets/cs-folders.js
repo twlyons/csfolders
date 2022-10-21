@@ -1,6 +1,7 @@
-function printValue() {
+function calculation() {
     let initialValString = document.getElementById("takeValue").value;
     let initialVal = Number(initialValString);
+
     let folderValEnd = initialVal + 99;
     let folderTitle = "CS" + initialVal + " - CS" + folderValEnd;
     document.getElementById("folderDisplayPrint").innerHTML = folderTitle;
@@ -53,4 +54,15 @@ function printValue() {
     let valJEnd = valIEnd + 10;
     let JPrint = "CS" + valJStart + " - CS" + valJEnd;
     document.getElementById("tenthLineDisp").innerHTML = JPrint;
+}
+
+function printValue() {
+    let initialValString = document.getElementById("takeValue").value;
+    let initialVal = Number(initialValString);
+
+    if (initialVal !== initialVal || initialVal.toString().length !== 6) {
+        alert("Please input a six digit numerical value");
+    } else {
+        calculation();
+    }
 }
